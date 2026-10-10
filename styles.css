@@ -80,18 +80,20 @@ fieldset{border:0;margin:0;padding:0}
 .packages{display:grid;gap:12px;margin-top:6px}
 .pkg{position:relative;display:block;cursor:pointer}
 .pkg input{position:absolute;opacity:0;inset:0;cursor:pointer}
-.pkg-body{display:block;background:#fff;border:1.5px solid var(--line);border-radius:var(--r-md);padding:18px 16px;transition:border-color .2s,box-shadow .2s}
+.pkg-body{display:flex;flex-direction:column;background:#fff;border:1.5px solid var(--line);border-radius:var(--r-md);padding:18px 16px;transition:border-color .2s,box-shadow .2s}
 .pkg input:checked + .pkg-body{border:2px solid var(--purple-dk);box-shadow:0 0 0 4px rgba(139,92,246,.10)}
 .pkg input:focus-visible + .pkg-body{outline:3px solid var(--purple);outline-offset:2px}
-.pkg-head{display:flex;align-items:flex-start;gap:12px}
-.radio{width:22px;height:22px;border-radius:50%;border:2px solid #b9b6c2;flex:none;margin-top:6px;display:grid;place-items:center}
+.radio{width:18px;height:18px;border-radius:50%;border:2px solid #b9b6c2;flex:none;display:grid;place-items:center}
 .pkg input:checked + .pkg-body .radio{border-color:var(--purple-dk)}
-.pkg input:checked + .pkg-body .radio::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--purple-dk)}
-.pkg-title{flex:1;font-size:22px;font-weight:700;line-height:1.25}
-.pkg-title small{display:block;font-size:15px;font-weight:400;color:#555;margin-top:4px}
-.price{font-size:22px;font-weight:700}
-.pkg-desc{display:block;font-size:15px;color:#333;margin:12px 0}
+.pkg input:checked + .pkg-body .radio::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--purple-dk)}
+.pkg-title{display:block;font-size:25px;font-weight:700;line-height:1.2}
+.pkg-aud{display:block;font-size:16px;font-weight:500;color:#555;margin-top:6px}
+.pkg-desc{display:block;font-size:16px;color:#333;margin:12px 0;line-height:1.5}
+.pkg-foot{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:#666}
+.pkg-code{flex:1}
+.price{font-size:15px;font-weight:500;color:#555}
 .depth{display:flex;align-items:center;gap:6px;font-size:13px;color:#666}
+.pkg .depth{margin-bottom:16px}
 .depth i{width:10px;height:10px;border-radius:50%;background:#e4e2ea}
 .depth i.on{background:var(--purple-dk)}
 .depth i:last-of-type{margin-right:6px}
