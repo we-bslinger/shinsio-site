@@ -120,7 +120,7 @@ Semantic tokens: `--gutter` 16 (page side padding on mobile) · `--group-gap` 35
   <span class="depth" aria-label="…"><i class="on"></i>…</span>
   <span class="pkg-foot"><span class="radio"></span><span class="pkg-code">Package A</span><span class="price">CA$3.00</span></span></span></label>
 ```
-The hierarchy is name first (Title 2), then audience, then description, then depth, with a small footer that holds the price. It's white with radius 20 and no border. When selected it gets `box-shadow: inset 0 0 0 2px var(--purple-dk)` and the radio fills, with no outer glow. Pricing comes from `data-price` in `main.js`. Totals are package + packs at CA$4.00 each, with any two different packs CA$7.00 (applied per pair; a "Two-add-on offer" saving row appears when it applies). Add-on and pair prices are the `ADDON` and `PAIR` constants in `main.js`. All prices CAD, formatted `CA$0.00`.
+The hierarchy is name first (Title 2), then audience, then description, then depth, with a small footer that holds the price. It's white with radius 20 and no border. When selected it gets `box-shadow: inset 0 0 0 2px var(--purple-dk)` and the radio fills, with no outer glow. Pricing comes from `data-price` in `main.js`. Totals are package + packs at CA$4.00 each, with any two different packs CA$7.00 per pair and an unpaired pack at CA$4.00 (2 = CA$7, 3 = CA$11, 4 = CA$14; a "Two-add-on offer" saving row appears when the discount applies). Add-on and pair prices are the `ADDON` and `PAIR` constants in `main.js`. All prices CAD, formatted `CA$0.00`.
 
 **Summary**: `.summary` uses `--lav` with radius 20. Value rows are `.row`, and the total row is `.row.total`. It sits inside `.research-aside` together with the checkout button and the fine print.
 

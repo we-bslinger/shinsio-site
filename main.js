@@ -2,7 +2,7 @@
   const fmt = n => 'CA$' + n.toFixed(2);
   // Pricing constants (CAD). Change here only; pack labels/data-price are set from ADDON.
   const ADDON = 4.00; // each add-on pack
-  const PAIR = 7.00;  // any two different add-ons, applied per pair
+  const PAIR = 7.00;  // any two different add-ons (each pair; leftover single at ADDON)
   const pkgs = document.querySelectorAll('input[name="package"]');
   const packs = document.querySelectorAll('input[name="pack"]');
   packs.forEach(x => { x.dataset.price = ADDON.toFixed(2); x.closest('label').querySelector('.pack-price').textContent = fmt(ADDON); });
@@ -14,15 +14,16 @@
     const sel = document.querySelector('input[name="package"]:checked');
     const p = sel ? parseFloat(sel.dataset.price) : 0;
     const chosen = [...packs].filter(x => x.checked);
-    const list = chosen.reduce((s, x) => s + parseFloat(x.dataset.price), 0);
-    const pairs = Math.floor(chosen.length / 2);
-    const save = pairs ? Math.round((pairs * (2 * ADDON - PAIR)) * 100) / 100 : 0;
-    const pk = Math.round((list - save) * 100) / 100;
+    const n = chosen.length;
+    const list = n * ADDON;
+    // Pairwise: each pair CA$7; unpaired add-on CA$4 → floor(n/2)*PAIR + (n%2)*ADDON
+    const pk = Math.floor(n / 2) * PAIR + (n % 2) * ADDON;
+    const save = Math.round((list - pk) * 100) / 100;
     const offerRow = document.getElementById('sum-offer-row');
     offerRow.style.display = save > 0 ? '' : 'none';
     document.getElementById('sum-offer').textContent = '−' + fmt(save);
     document.getElementById('sum-pkg').textContent = fmt(p);
-    document.getElementById('sum-packs-label').textContent = `Research packs (${chosen.length})`;
+    document.getElementById('sum-packs-label').textContent = `Research packs (${n})`;
     document.getElementById('sum-packs').textContent = fmt(list);
     document.getElementById('sum-total').textContent = fmt(Math.round((p + pk) * 100) / 100);
   }
