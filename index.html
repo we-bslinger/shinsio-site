@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&family=Raleway:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23A78BFA'/%3E%3Cstop offset='1' stop-color='%237C3AED'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M10 4h36a8 8 0 0 0 10 10v20H8V6a2 2 0 0 1 2-2z' fill='url(%23g)' stroke='%231F1F1F' stroke-width='4' stroke-linejoin='round'/%3E%3Crect x='2' y='37' width='60' height='8' rx='3' fill='%231F1F1F'/%3E%3Crect x='26' y='40' width='12' height='2' rx='1' fill='%23F7F6F3'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -46,19 +46,23 @@
     <!-- 01 -->
     <section class="section" id="hook" aria-labelledby="hook-h">
       <p class="eyebrow">01 / The Challenge</p>
-      <div class="card tint-lavender">
+      <div class="card tint-lavender has-media">
+        <div class="card-text">
         <p class="kicker">Creator Uncovered</p>
         <h1 id="hook-h">Tired of paying for AI tools that don't deliver what you expected?</h1>
         <p>You've seen the videos. You've seen what's possible. But when you try it yourself, the costs, limitations and missing pieces can tell a different story.</p>
         <p>We're here to connect the dots and give you the information you need to understand what it really takes to create the content you want.</p>
         <a class="btn btn-purple" href="#research">Get the Reality Check</a>
+        </div>
+        <div class="media media-1x1" aria-hidden="true"><svg class="media-glyph" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></div>
       </div>
     </section>
 
     <!-- 02 -->
     <section class="section" id="reality" aria-labelledby="reality-h">
       <p class="eyebrow">02 / The Hidden Costs</p>
-      <div class="card tint-blue">
+      <div class="card tint-blue has-media flip">
+        <div class="card-text">
         <h2 id="reality-h">The subscription price isn't always the production cost.</h2>
         <p>A tutorial might show you how to generate videos in minutes. What it may leave out is what happens when you need more generations, voiceovers, editing, revisions or a higher subscription tier.</p>
         <div class="tiles">
@@ -79,6 +83,9 @@
             <h3>Revisions</h3><p>Retries, corrections and extra usage.</p>
           </div>
         </div>
+        </div>
+        <div class="media media-4x3" aria-hidden="true"><svg class="media-glyph" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></div>
+        <div class="card-full">
         <hr>
         <div class="note">
           <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
@@ -88,13 +95,15 @@
           </div>
         </div>
         <p class="badge">Current information. Real-world context.</p>
+        </div>
       </div>
     </section>
 
     <!-- 03 -->
     <section class="section" id="solution" aria-labelledby="solution-h">
       <p class="eyebrow">03 / Our Approach</p>
-      <div class="card tint-green">
+      <div class="card tint-green has-media">
+        <div class="card-text">
         <h2 id="solution-h">We connect the dots and complete the picture.</h2>
         <p>Creator Uncovered: The Reality Check investigates the information you need to understand your options before investing more time or money.</p>
         <ul class="feature-list">
@@ -105,14 +114,19 @@
           <li><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M16 12.5h5M6 6V5a2 2 0 0 1 2-2h9"/></svg>
             <div><h3>Understand the real costs</h3><p>Subscriptions, extra services, usage and the human effort involved.</p></div></li>
         </ul>
+        </div>
+        <div class="media media-1x1" aria-hidden="true"><svg class="media-glyph" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></div>
+        <div class="card-full">
         <p class="trust">We don't promise you success. We help you understand what you're getting into.</p>
+        </div>
       </div>
     </section>
 
     <!-- 04 -->
     <section class="section" id="research" aria-labelledby="research-h">
       <p class="eyebrow">04 / Research options</p>
-      <div class="card plain">
+      <div class="card plain research-grid">
+        <div class="research-main">
         <h2 id="research-h">Start where you are. Go as deep as you need.</h2>
         <p class="muted">Whether you're curious, frustrated by previous attempts or ready to build a workflow, choose the level of research that suits your needs.</p>
 
@@ -121,6 +135,7 @@
           <label class="pkg">
             <input type="radio" name="package" value="A" data-price="4.99" data-name="Package A · Explore">
             <span class="pkg-body">
+              <span class="media media-16x9 media-thumb" aria-hidden="true"><svg class="media-glyph" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></span>
               <span class="pkg-title">Explore</span>
               <span class="pkg-aud">For the curious beginner</span>
               <span class="pkg-desc">Get an approachable overview of the AI content-creation landscape, available options and important costs and limitations.</span>
@@ -131,6 +146,7 @@
           <label class="pkg">
             <input type="radio" name="package" value="B" data-price="9.99" data-name="Package B · Investigate" checked>
             <span class="pkg-body">
+              <span class="media media-16x9 media-thumb" aria-hidden="true"><svg class="media-glyph" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></span>
               <span class="pkg-title">Investigate</span>
               <span class="pkg-aud">For those ready to go further</span>
               <span class="pkg-desc">Explore production workflows, tool combinations, plan requirements, costs and practical trade-offs in greater depth.</span>
@@ -154,7 +170,8 @@
           <label class="pack"><input type="checkbox" name="pack" value="local" data-price="3.99"><span class="check" aria-hidden="true"></span>
             <span class="pack-text"><span class="pack-title">Local AI Pack</span><span class="pack-desc">Local models and tools, hardware needs, licences, setup, costs and limitations.</span></span><span class="pack-price">$3.99</span></label>
         </fieldset>
-
+        </div>
+        <div class="research-aside">
         <div class="summary" aria-live="polite">
           <div class="row"><span>Selected package</span><strong id="sum-pkg">$9.99</strong></div>
           <div class="row"><span id="sum-packs-label">Research packs (0)</span><strong id="sum-packs">$0.00</strong></div>
@@ -164,13 +181,15 @@
         </div>
         <button class="btn btn-dark" type="button" id="checkout">Continue to checkout</button>
         <p class="fine center" id="checkout-note">The checkout button is a design prototype; no payment is processed.</p>
+        </div>
       </div>
     </section>
 
     <!-- 05 -->
     <section class="section" id="family" aria-labelledby="family-h">
       <p class="eyebrow">05 / Our app family</p>
-      <div class="card tint-mist">
+      <div class="card tint-mist has-media flip">
+        <div class="card-text">
         <h2 id="family-h">One company. Five focused apps.</h2>
         <p>Creator Uncovered helps you understand the reality. Our wider family of apps is being designed to help people organise, discover and work with information in other areas of life.</p>
         <div class="chips" role="tablist" aria-label="ShinsIO apps"></div>
@@ -180,23 +199,30 @@
           <p id="app-desc"></p>
           <span class="status">Proposed · in development</span>
         </div>
+        </div>
+        <div class="media media-1x1" aria-hidden="true"><svg class="media-glyph" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg><span class="media-phone"></span></div>
       </div>
     </section>
 
     <!-- 06 -->
     <section class="section" id="supporting" aria-labelledby="sup-h">
       <p class="eyebrow">06 / Explore further</p>
-      <div class="card plain">
+      <div class="card plain has-media">
+        <div class="card-text">
         <h2 id="sup-h">More clarity. Fewer rabbit holes.</h2>
         <p class="muted">Over time, ShinsIO can add practical guides, research updates and focused resources to help people navigate changing tools and opportunities.</p>
+        </div>
+        <div class="media media-4x3" aria-hidden="true"><svg class="media-glyph" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></div>
+        <div class="card-full">
         <ul class="link-list">
-          <li><a href="#supporting"><svg class="ico" viewBox="0 0 24 24"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1zM12 6v14"/></svg>
-            <span><strong>Practical guides</strong><small>Helpful walkthroughs and explanations.</small></span><span class="chev">›</span></a></li>
-          <li><a href="#supporting"><svg class="ico" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-4.5L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4.5l2-2.5M20 20v-5h-5"/></svg>
-            <span><strong>Research updates</strong><small>Important changes to tools, plans and costs.</small></span><span class="chev">›</span></a></li>
-          <li><a href="#supporting"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            <span><strong>Stay informed</strong><small>A future option for useful updates, if we decide to offer it.</small></span><span class="chev">›</span></a></li>
+          <li><a href="#supporting"><span class="row-tile"><svg class="ico" viewBox="0 0 24 24"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1zM12 6v14"/></svg></span>
+            <span class="row-text"><strong>Practical guides</strong><small>Helpful walkthroughs and explanations.</small></span><svg class="chev" viewBox="0 0 8 13" aria-hidden="true"><path d="M1.5 1.5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#supporting"><span class="row-tile"><svg class="ico" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-4.5L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4.5l2-2.5M20 20v-5h-5"/></svg></span>
+            <span class="row-text"><strong>Research updates</strong><small>Important changes to tools, plans and costs.</small></span><svg class="chev" viewBox="0 0 8 13" aria-hidden="true"><path d="M1.5 1.5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#supporting"><span class="row-tile"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <span class="row-text"><strong>Stay informed</strong><small>A future option for useful updates, if we decide to offer it.</small></span><svg class="chev" viewBox="0 0 8 13" aria-hidden="true"><path d="M1.5 1.5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
         </ul>
+        </div>
       </div>
     </section>
   </main>
@@ -213,6 +239,6 @@
     <p class="copy">© ShinsIO · Proposed brand and site concept</p>
   </footer>
 </div>
-<script src="main.js?v=2"></script>
+<script src="main.js?v=3"></script>
 </body>
 </html>
