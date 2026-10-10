@@ -133,25 +133,25 @@
         <fieldset class="packages">
           <legend class="sr-only">Research package</legend>
           <label class="pkg">
-            <input type="radio" name="package" value="A" data-price="4.99" data-name="Package A · Explore">
+            <input type="radio" name="package" value="A" data-price="3.00" data-name="Package A · Explore">
             <span class="pkg-body">
               <span class="media media-16x9 media-thumb" aria-hidden="true"><svg class="media-glyph" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></span>
               <span class="pkg-title">Explore</span>
               <span class="pkg-aud">For the curious beginner</span>
               <span class="pkg-desc">Get an approachable overview of the AI content-creation landscape, available options and important costs and limitations.</span>
               <span class="depth" aria-label="Depth: introductory research"><i class="on"></i><i class="on"></i><i class="on"></i><i></i> Introductory research</span>
-              <span class="pkg-foot"><span class="radio" aria-hidden="true"></span><span class="pkg-code">Package A</span><span class="price">$4.99</span></span>
+              <span class="pkg-foot"><span class="radio" aria-hidden="true"></span><span class="pkg-code">Package A</span><span class="price">CA$3.00</span></span>
             </span>
           </label>
           <label class="pkg">
-            <input type="radio" name="package" value="B" data-price="9.99" data-name="Package B · Investigate" checked>
+            <input type="radio" name="package" value="B" data-price="5.00" data-name="Package B · Investigate" checked>
             <span class="pkg-body">
               <span class="media media-16x9 media-thumb" aria-hidden="true"><svg class="media-glyph" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></span>
               <span class="pkg-title">Investigate</span>
               <span class="pkg-aud">For those ready to go further</span>
               <span class="pkg-desc">Explore production workflows, tool combinations, plan requirements, costs and practical trade-offs in greater depth.</span>
               <span class="depth" aria-label="Depth: deeper research"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i> Deeper research</span>
-              <span class="pkg-foot"><span class="radio" aria-hidden="true"></span><span class="pkg-code">Package B</span><span class="price">$9.99</span></span>
+              <span class="pkg-foot"><span class="radio" aria-hidden="true"></span><span class="pkg-code">Package B</span><span class="price">CA$5.00</span></span>
             </span>
           </label>
         </fieldset>
@@ -160,27 +160,28 @@
         <h3 class="h-sub">Add a research pack</h3>
         <p class="muted">Choose the additional research areas that matter to you. Packs add to a selected package.</p>
         <fieldset class="packs">
-          <legend class="sr-only">Optional research packs, US$3.99 each</legend>
-          <label class="pack"><input type="checkbox" name="pack" value="creator" data-price="3.99"><span class="check" aria-hidden="true"></span>
-            <span class="pack-text"><span class="pack-title">Content Creator Pack</span><span class="pack-desc">AI video, image, voice, scripting, editing, clipping, scheduling and publishing tools.</span></span><span class="pack-price">$3.99</span></label>
-          <label class="pack"><input type="checkbox" name="pack" value="business" data-price="3.99"><span class="check" aria-hidden="true"></span>
-            <span class="pack-text"><span class="pack-title">Business Tools Pack</span><span class="pack-desc">Website builders, agents, automation, CRM, email, e-commerce and invoicing tools.</span></span><span class="pack-price">$3.99</span></label>
-          <label class="pack"><input type="checkbox" name="pack" value="free" data-price="3.99"><span class="check" aria-hidden="true"></span>
-            <span class="pack-text"><span class="pack-title">Free &amp; Open-Source Alternatives</span><span class="pack-desc">Free tiers, open-source options, licensing, commercial use, setup and limitations.</span></span><span class="pack-price">$3.99</span></label>
-          <label class="pack"><input type="checkbox" name="pack" value="local" data-price="3.99"><span class="check" aria-hidden="true"></span>
-            <span class="pack-text"><span class="pack-title">Local AI Pack</span><span class="pack-desc">Local models and tools, hardware needs, licences, setup, costs and limitations.</span></span><span class="pack-price">$3.99</span></label>
+          <legend class="sr-only">Optional research packs, CA$4.00 each; any two different packs CA$7.00</legend>
+          <label class="pack"><input type="checkbox" name="pack" value="creator" data-price="4.00"><span class="check" aria-hidden="true"></span>
+            <span class="pack-text"><span class="pack-title">Content Creator Pack</span><span class="pack-desc">AI video, image, voice, scripting, editing, clipping, scheduling and publishing tools.</span></span><span class="pack-price">CA$4.00</span></label>
+          <label class="pack"><input type="checkbox" name="pack" value="business" data-price="4.00"><span class="check" aria-hidden="true"></span>
+            <span class="pack-text"><span class="pack-title">Business Tools Pack</span><span class="pack-desc">Website builders, agents, automation, CRM, email, e-commerce and invoicing tools.</span></span><span class="pack-price">CA$4.00</span></label>
+          <label class="pack"><input type="checkbox" name="pack" value="free" data-price="4.00"><span class="check" aria-hidden="true"></span>
+            <span class="pack-text"><span class="pack-title">Free &amp; Open-Source Alternatives</span><span class="pack-desc">Free tiers, open-source options, licensing, commercial use, setup and limitations.</span></span><span class="pack-price">CA$4.00</span></label>
+          <label class="pack"><input type="checkbox" name="pack" value="local" data-price="4.00"><span class="check" aria-hidden="true"></span>
+            <span class="pack-text"><span class="pack-title">Local AI Pack</span><span class="pack-desc">Local models and tools, hardware needs, licences, setup, costs and limitations.</span></span><span class="pack-price">CA$4.00</span></label>
         </fieldset>
         </div>
         <div class="research-aside">
         <div class="summary" aria-live="polite">
-          <div class="row"><span>Selected package</span><strong id="sum-pkg">$9.99</strong></div>
-          <div class="row"><span id="sum-packs-label">Research packs (0)</span><strong id="sum-packs">$0.00</strong></div>
+          <div class="row"><span>Selected package</span><strong id="sum-pkg">CA$5.00</strong></div>
+          <div class="row"><span id="sum-packs-label">Research packs (0)</span><strong id="sum-packs">CA$0.00</strong></div>
+          <div class="row" id="sum-offer-row" style="display:none"><span>Two-add-on offer</span><strong id="sum-offer">−CA$0.00</strong></div>
           <hr>
-          <div class="row total"><span>Illustrative total</span><strong id="sum-total">$9.99</strong></div>
-          <p class="fine">Provisional one-time pricing in USD for design exploration. Final package contents and prices remain to be confirmed. Taxes and fees not shown.</p>
+          <div class="row total"><span>Illustrative total</span><strong id="sum-total">CA$5.00</strong></div>
+          <p class="fine">All prices in Canadian dollars (CAD), one-time. Any two different add-on packs <span id="pair-note">CA$7.00</span>. Taxes not shown.</p>
         </div>
         <button class="btn btn-dark" type="button" id="checkout">Continue to checkout</button>
-        <p class="fine center" id="checkout-note">The checkout button is a design prototype; no payment is processed.</p>
+        <p class="fine center" id="checkout-note">Payments are planned via PayPal. Checkout isn’t live yet; no payment is processed.</p>
         </div>
       </div>
     </section>
@@ -239,6 +240,6 @@
     <p class="copy">© ShinsIO · Proposed brand and site concept</p>
   </footer>
 </div>
-<script src="main.js?v=3"></script>
+<script src="main.js?v=4"></script>
 </body>
 </html>
