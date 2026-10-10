@@ -5,27 +5,65 @@ This guide describes what `index.html` and `styles.css` actually implement. Ever
 ## 1. Principles
 - **Vertical first.** The page is one column, and the eye moves top to bottom: section label → one surface → next group. Sections are numbered (01 / …) so the reading order is obvious.
 - **iOS-inspired, not iOS.** We borrow the structure: inset grouped lists, hairlines aligned to the text, capsule buttons, concentric radii, 44px touch targets, and a strict type scale. We don't borrow Apple assets, system colours, SF Pro/SF Symbols, or Apple naming.
-- **Our own palette.** Off White page, Charcoal text, Purple accent, pastel card tints. Never use iOS system colours (#0088FF, #F2F2F7 and so on).
+- **Our own palette.** Palette D "Blue-Grey + Violet-Grey": cool grey page, blue-grey ink, slate accent, quiet cool tints. Never use iOS system colours (#0088FF, #F2F2F7 and so on).
 - **Restraint.** One surface per section, no boxes inside boxes, flat fills instead of strokes or shadows, and emphasis from weight rather than extra sizes.
 
 ## 2. Tokens
-### Colour
+### Colour — Palette D "Blue-Grey + Violet-Grey"
+**Rationale.** One cohesive cool family instead of a purple accent with mixed pastels. Blue-grey (#373E4F → #535E7A) supplies depth for type, buttons and selection; violet-grey tints (#DDD9E6, #E7E4EE, #E0DDEA) add variation between sections without breaking the family; a rose whisper (#F2EBED) is used sparingly (one app hue only). Token names are legacy (`--purple`, `--lav`, …) and kept for stability; their values are below. No hard-coded colours outside `:root` except white-on-dark text and translucent white overlays.
+
 | Token | Value | Use |
 |---|---|---|
-| `--offwhite` | #F7F6F3 | Page background |
-| `--charcoal` | #1F1F1F | Text, dark button, selected checkbox |
-| `--purple` | #8B5CF6 | Focus ring |
-| `--purple-dk` | #5B3A9E | Accent text, primary button, selected package, totals |
-| `--lav` / `--lav-2` | #EEEAF8 / #E3DBF7 | 01 card, summary, row tiles, thumbnails / selected chip, app card |
-| `--blue` / `--blue-dk` | #E6EDF8 / #2F5D9E | 02 card / its icons and badge text |
-| `--green` / `--green-dk` | #E4F0E7 / #24402F | 03 card / its text |
-| `--mist` | #F1EFF5 | 05 card gradient |
-| `--peach`, `--rose` | #FBEBDD, #F8E4EA | App-card hues |
-| `--line` | #E6E4DF | Header/footer rules, package footer rule |
-| `--hairline` | rgba(0,0,0,.09) | Row separators and `hr` (rendered at 0.5px) |
-| `--text-2` / `--text-3` | #505055 / #6b6b70 | Secondary text / section labels |
-| `--chev` | #b5b3ba | Disclosure chevron |
-| `--media` / `--media-plain` | rgba(255,255,255,.55) / rgba(31,31,31,.05) | Placeholders on tinted / plain cards |
+| `--offwhite` | #F1F3F6 | Page background (also `theme-color`) |
+| `--white` | #FFFFFF | Cards/surfaces: tiles, package cards, packs, link list |
+| `--charcoal` | #373E4F | Text, dark button, selected checkbox, logo outline |
+| `--text-2` / `--text-3` / `--slate` | #505A72 | Secondary and tertiary text, section labels |
+| `--line` / `--hairline` | #D9DEE7 | Separators (hairline rendered at 0.5px) |
+| `--purple` | #535E7A | Accent: focus ring |
+| `--purple-dk` | #373E4F | Button / pressed, selected package, totals, kicker |
+| `--lav` (tint 01) | #E3E7EE | 01 card, summary, row tiles, thumbnails, selected chip, app card |
+| `--blue` (tint 02) | #DDD9E6 | 02 card, "blue" app hue |
+| `--green` (tint 03) | #E8ECF2 | 03 card, "green" app hue |
+| `--mist` (tint 04) | #ECEEF2 | 05 card (flat) |
+| `--peach` (tint 05) | #E7E4EE | "peach" app hue |
+| `--rose` (tint 06) | #F2EBED | "rose" app hue — rose whisper, use sparingly |
+| `--placeholder` / `--media-plain` | #DCE1EA | Placeholders on plain cards, depth dots |
+| `--chip` | #E3E7EE | Chip fill |
+| `--pill` | #E0DDEA | Badge pill bg (text #373E4F) |
+| `--control` / `--chev` | #AEB5C4 | Unchecked radio/check borders, chevrons (decorative) |
+| `--blue-dk` / `--green-dk` | #373E4F | Icons / text on tinted cards |
+| `--media` | rgba(255,255,255,.55) | Placeholders on tinted cards |
+| Logo gradient | #8090B0 → #373E4F | `#screenGrad` in index.html |
+| Tutorials dividers | rgba(55,62,79,.10) | Subtle against #F1F3F6 |
+
+**Contrast (WCAG ratio, AA ≥ 4.5 for body text)**
+
+| Pair | Ratio |
+|---|---|
+| text/bg | 9.62:1 |
+| text2/bg | 6.2:1 |
+| text3/bg | 6.2:1 |
+| text/surface | 10.69:1 |
+| text2/surface | 6.89:1 |
+| text/tint01 | 8.62:1 |
+| text2/tint01 | 5.56:1 |
+| text/tint02 | 7.71:1 |
+| text2/tint02 | 4.97:1 |
+| text/tint03 | 9.02:1 |
+| text2/tint03 | 5.81:1 |
+| text/tint04 | 9.2:1 |
+| text2/tint04 | 5.93:1 |
+| text/tint05 | 8.52:1 |
+| text2/tint05 | 5.49:1 |
+| text/tint06 | 9.1:1 |
+| text2/tint06 | 5.87:1 |
+| white/accent | 6.46:1 |
+| white/accent-pressed(btn) | 10.69:1 |
+| white/text(dark btn) | 10.69:1 |
+| accent-dk/tint01(kicker) | 8.62:1 |
+| accent-dk/surface | 10.69:1 |
+| pill | 7.99:1 |
+| text3/tint01 | 5.56:1 |
 
 ### Type scale (`font:` shorthand tokens, font = Inter → system-ui)
 | Token | Value | Roles |
