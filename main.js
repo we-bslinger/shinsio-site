@@ -21,15 +21,6 @@
     n.classList.add('flash');
   });
 
-  // Menu
-  const btn = document.querySelector('.menu-btn'), nav = document.getElementById('site-nav');
-  btn.addEventListener('click', () => {
-    const open = btn.getAttribute('aria-expanded') !== 'true';
-    btn.setAttribute('aria-expanded', open); nav.classList.toggle('open', open);
-    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  });
-  nav.addEventListener('click', e => { if (e.target.tagName === 'A') { btn.setAttribute('aria-expanded', 'false'); nav.classList.remove('open'); } });
-
   // App family
   const apps = [
     { id: 'CIPEEBOX', tag: 'Your digital cookbook.', desc: 'Save, organise and build a personal collection of recipes.', hue: 'lav' },
