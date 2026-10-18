@@ -182,6 +182,27 @@ fieldset{border:0;margin:0;padding:0}
 .foot-links a{display:inline-flex;align-items:center;min-height:var(--touch);text-decoration:none;font:var(--t-sub)}
 .copy{font:var(--t-foot);color:var(--text-2);margin:0}
 
+/* Secondary info pages (footer-linked): one white surface, reading width — see DESIGN.md */
+.doc{background:var(--white);max-width:760px}
+.doc h1{margin-bottom:var(--s-1)}
+.doc h2{font:var(--t-title2);margin:var(--s-6) 0 var(--s-2)}
+.card.doc .fine{margin:0 0 var(--s-4)}
+.card.doc .lede{color:var(--text-2)}
+.doc ul{margin:0 0 var(--s-3);padding-left:var(--s-5)}
+.doc li{margin-bottom:var(--s-2)}
+.doc a{text-underline-offset:2px}
+.doc .tbc{background:var(--lav);border-radius:var(--r-inner);padding:14px 16px;margin:0 0 var(--s-3)}
+.card.doc .tbc p{margin:var(--s-1) 0 0}
+.card.doc .tbc p:first-child{margin-top:0}
+.labels{margin:0 0 var(--s-3)}
+.labels div{position:relative;padding:var(--s-3) 0}
+.labels div+div::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--hairline);transform:scaleY(.5)}
+.labels dt{font:var(--t-head)}
+.labels dd{margin:2px 0 0;font:var(--t-sub);color:var(--text-2)}
+.doc-back{margin:var(--s-3) var(--s-4) 0}
+.doc-back a{display:inline-flex;align-items:center;min-height:var(--touch);font:var(--t-sub);text-decoration:none}
+.foot-links a[aria-current="page"]{font-weight:600}
+
 /* Image placeholders: hidden below 960px */
 .media{display:none}
 .media-glyph{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.35}

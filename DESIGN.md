@@ -128,6 +128,10 @@ The hierarchy is name first (Title 2), then audience, then description, then dep
 
 **Footer**: `.site-footer` contains `.foot-top` (small brand + `.foot-tag`), then `nav.foot-links` (links at least 44px tall, `--t-sub`), then `.copy` (footnote). It has a 16px inset and no surface.
 
+**Info pages (footer-only)**: `about.html`, `research.html`, `disclaimer.html`, `privacy.html`, `terms.html`, `contact.html`. These are quiet background pages reached only from the footer. Don't add a top nav, hamburger or home-page section for them. Shell: `header.site-header` (the logo links to `index.html`; no tab-nav), then one `section.section` with an eyebrow (`Info / Name`) and a single `article.card.doc`. That's a white surface capped at 760px, with `h1`, a `.fine` "Last updated" line, a `.lede`, `h2` at Title 2, lists, an optional `dl.labels` (rows with inset hairlines) and `.tbc` (lav, radius 12) for owner items still to be confirmed. Below the card is one `.doc-back` link home, then the shared footer. The footer marks the current page with `aria-current="page"` (600 weight). These pages don't load `main.js`.
+
+**Footer links** (all pages): About · Research approach · Disclaimer · Privacy · Terms · Contact.
+
 **Image placeholder**: `<div class="media media-1x1|media-4x3|media-16x9" aria-hidden="true"><svg class="media-glyph">…</svg></div>`. It's a neutral tinted block with radius 12 and a faint image glyph. It's `display:none` below 960px. In 05 it also holds a `.media-phone` 9:16 crop, and its fill follows the selected app hue (`:has()`).
 
 ## 4. Desktop rules
