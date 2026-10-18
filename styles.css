@@ -191,9 +191,6 @@ fieldset{border:0;margin:0;padding:0}
 .doc ul{margin:0 0 var(--s-3);padding-left:var(--s-5)}
 .doc li{margin-bottom:var(--s-2)}
 .doc a{text-underline-offset:2px}
-.doc .tbc{background:var(--lav);border-radius:var(--r-inner);padding:14px 16px;margin:0 0 var(--s-3)}
-.card.doc .tbc p{margin:var(--s-1) 0 0}
-.card.doc .tbc p:first-child{margin-top:0}
 .labels{margin:0 0 var(--s-3)}
 .labels div{position:relative;padding:var(--s-3) 0}
 .labels div+div::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--hairline);transform:scaleY(.5)}
